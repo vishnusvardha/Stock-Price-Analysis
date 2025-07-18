@@ -1,0 +1,81 @@
+body {
+    background: #f7f9fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px 28px 24px 28px;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3e50;
+    margin-bottom: 28px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 9px 10px;
+    margin-bottom: 18px;
+    border: 1px solid #dbe2ea;
+    border-radius: 6px;
+    background: #f8fafc;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+form input:focus, form select:focus {
+    border-color: #6c63ff;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: linear-gradient(90deg, #6c63ff 0%, #48c6ef 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #48c6ef 0%, #6c63ff 100%);
+}
+
+#result {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #2d3e50;
+    min-height: 28px;
+}
+    /* removed old button style, now handled by button[type="submit"] above */
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}

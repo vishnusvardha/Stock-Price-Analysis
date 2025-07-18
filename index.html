@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f7f9fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .container {
+            max-width: 420px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            padding: 32px 28px 24px 28px;
+        }
+        h1 {
+            text-align: center;
+            color: #2d3e50;
+            margin-bottom: 28px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 6px;
+            color: #34495e;
+            font-weight: 500;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 9px 10px;
+            margin-bottom: 18px;
+            border: 1px solid #dbe2ea;
+            border-radius: 6px;
+            background: #f8fafc;
+            font-size: 1rem;
+            transition: border 0.2s;
+        }
+        form input:focus, form select:focus {
+            border-color: #6c63ff;
+            outline: none;
+        }
+        button[type="submit"] {
+            width: 100%;
+            background: linear-gradient(90deg, #6c63ff 0%, #48c6ef 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 8px;
+        }
+        button[type="submit"]:hover {
+            background: linear-gradient(90deg, #48c6ef 0%, #6c63ff 100%);
+        }
+        #result {
+            margin-top: 22px;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #2d3e50;
+            min-height: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Price Prediction</h1>
+        <p style="text-align:center; color:#6c63ff; margin-bottom:18px;">Enter a stock symbol (e.g., <b>AAPL</b>, <b>MSFT</b>) to get the latest price prediction.</p>
+        <form id="stockForm">
+            <label for="stockSymbol" style="font-weight:600; color:#34495e;">Stock Symbol:</label>
+            <input type="text" id="stockSymbol" name="stockSymbol" placeholder="e.g. AAPL" style="text-transform:uppercase;" required />
+            <button type="submit">Predict Price</button>
+        </form>
+        <div id="result"></div>
+        <div style="margin-top:30px;">
+            <canvas id="predictionChart" style="max-width:100%; background:#f8fafc; border-radius:8px;"></canvas>
+        </div>
+    </div>
+    <!-- No advanced fields JS needed for symbol-only mode -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
